@@ -1,8 +1,8 @@
 {
   "name": "design-system",
   "private": true,
-  "packageManager": "pnpm@8.15.6",
   "preinstall": "npx only-allow pnpm",
+  "packageManager": "pnpm@8.15.6",
   "scripts": {
     "build": "turbo run build",
     "dev": "turbo run dev",

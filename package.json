@@ -1,5 +1,6 @@
 {
   "name": "@devade/design-system",
+  "version": "0.0.5",
   "private": false,
   "preinstall": "npx only-allow pnpm",
   "packageManager": "pnpm@8.15.6",
@@ -19,7 +20,6 @@
     "prettier": "^3.2.5",
     "turbo": "^2.5.0"
   },
-  "version": "0.0.0",
   "description": "devade design system",
   "main": "index.js",
   "dependencies": {

@@ -1,23 +1,11 @@
-# Turborepo Design System Starter
+# Turborepo Design System Starter Project
 
-This is a community-maintained example. If you experience a problem, please submit a pull request with a fix. GitHub Issues will be closed.
+This is an experimental design system starter project from Turborepo for Devade projects. 
 
-This guide explains how to use a React design system starter powered by:
+To view similar Turborepo samples visit:
+https://github.com/vercel/turborepo/blob/main/examples/design-system/README.md
 
-- 🏎 [Turborepo](https://turbo.build/repo) — High-performance build system for Monorepos
-- 🚀 [React](https://reactjs.org/) — JavaScript library for user interfaces
-- 🛠 [Tsup](https://github.com/egoist/tsup) — TypeScript bundler powered by esbuild
-- 📖 [Storybook](https://storybook.js.org/) — UI component environment powered by Vite
-
-As well as a few others tools preconfigured:
-
-- [TypeScript](https://www.typescriptlang.org/) for static type checking
-- [ESLint](https://eslint.org/) for code linting
-- [Prettier](https://prettier.io) for code formatting
-- [Changesets](https://github.com/changesets/changesets) for managing versioning and changelogs
-- [GitHub Actions](https://github.com/changesets/action) for fully automated package publishing
-
-## Using this example
+## To recreate this design system example
 
 Run the following command:
 
@@ -25,15 +13,7 @@ Run the following command:
 npx create-turbo@latest -e design-system
 ```
 
-### Useful Commands
-
-- `pnpm build` - Build all packages, including the Storybook site
-- `pnpm dev` - Run all packages locally and preview with Storybook
-- `pnpm lint` - Lint all packages
-- `pnpm changeset` - Generate a changeset
-- `pnpm clean` - Clean up all `node_modules` and `dist` folders (runs each package's clean script)
-
-## Turborepo
+## Info about Turborepo
 
 [Turborepo](https://turbo.build/repo) is a high-performance build system for JavaScript and TypeScript codebases. It was designed after the workflows used by massive software engineering organizations to ship code at scale. Turborepo abstracts the complex configuration needed for monorepos and provides fast, incremental builds with zero-configuration remote caching.
 
@@ -58,17 +38,17 @@ To make the ui library code work across all browsers, we need to compile the raw
 
 Running `pnpm build` from the root of the Turborepo will run the `build` command defined in each package's `package.json` file. Turborepo runs each `build` in parallel and caches & hashes the output to speed up future builds.
 
-For `@devade/design-system-ui`, the `build` command is equivalent to the following:
+For `@acme/ui`, the `build` command is equivalent to the following:
 
 ```bash
 tsup src/*.tsx --format esm,cjs --dts --external react
 ```
 
-`tsup` compiles all of the components in the design system individually, into both ES Modules and CommonJS formats as well as their TypeScript types. The `package.json` for `@devade/design-system-ui` then instructs the consumer to select the correct format:
+`tsup` compiles all of the components in the design system individually, into both ES Modules and CommonJS formats as well as their TypeScript types. The `package.json` for `@acme/ui` then instructs the consumer to select the correct format:
 
 ```json:ui/package.json
 {
-  "name": "@devade/design-system-ui",
+  "name": "@acme/ui",
   "version": "0.0.0",
   "sideEffects": false,
   "exports":{
@@ -114,7 +94,7 @@ When adding a new file, ensure that its specifier is defined in `package.json` f
 
 ```json:ui/package.json
 {
-  "name": "@devade/design-system-ui",
+  "name": "@acme/ui",
   "version": "0.0.0",
   "sideEffects": false,
   "exports":{
@@ -134,13 +114,13 @@ Storybook provides us with an interactive UI playground for our components. This
 
 - Use Vite to bundle stories instantly (in milliseconds)
 - Automatically find any stories inside the `stories/` folder
-- Support using module path aliases like `@devade/design-system-ui` for imports
+- Support using module path aliases like `@acme/ui` for imports
 - Write MDX for component documentation pages
 
 For example, here's the included Story for our `Button` component:
 
 ```js:apps/docs/stories/button.stories.mdx
-import { Button } from '@devade/design-system-ui/button';
+import { Button } from '@acme/ui/button';
 import { Meta, Story, Preview, Props } from '@storybook/addon-docs/blocks';
 
 <Meta title="Components/Button" component={Button} />

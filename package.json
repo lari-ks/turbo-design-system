@@ -1,5 +1,6 @@
 {
   "private": true,
+  "preinstall": "npx only-allow pnpm",
   "scripts": {
     "build": "turbo run build",
     "dev": "turbo run dev",

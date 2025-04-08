@@ -1,5 +1,7 @@
 {
+  "name": "design-system",
   "private": true,
+  "packageManager": "pnpm@8.15.6",
   "preinstall": "npx only-allow pnpm",
   "scripts": {
     "build": "turbo run build",
@@ -16,7 +18,5 @@
     "@changesets/cli": "^2.27.1",
     "prettier": "^3.2.5",
     "turbo": "^2.5.0"
-  },
-  "packageManager": "pnpm@8.15.6",
-  "name": "design-system"
+  }
 }

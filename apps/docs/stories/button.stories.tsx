@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from "@storybook/react";
-import { Button } from "@devade/ui/button";
+import { Button } from "@devade/design-system-ui/button";
 
 const meta: Meta<typeof Button> = {
   component: Button,

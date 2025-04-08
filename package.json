@@ -1,6 +1,6 @@
 {
-  "name": "design-system",
-  "private": true,
+  "name": "@devade/design-system",
+  "private": false,
   "preinstall": "npx only-allow pnpm",
   "packageManager": "pnpm@8.15.6",
   "scripts": {
@@ -18,5 +18,27 @@
     "@changesets/cli": "^2.27.1",
     "prettier": "^3.2.5",
     "turbo": "^2.5.0"
-  }
+  },
+  "version": "0.0.0",
+  "description": "devade design system",
+  "main": "index.js",
+  "dependencies": {
+    "eslint-plugin-storybook": "^0.8.0",
+    "storybook": "^8.2.6"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/lari-ks/turbo-design-system.git"
+  },
+  "keywords": [
+    "design",
+    "system",
+    "devade"
+  ],
+  "author": "lara sweeney",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/lari-ks/turbo-design-system/issues"
+  },
+  "homepage": "https://github.com/lari-ks/turbo-design-system#readme"
 }

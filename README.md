@@ -215,7 +215,6 @@ Publishing to NPM (private packages are paid only)
 Publishing to Github Packages (allows private and linking to repo)
 
 git config user.email "email"
-npm login --registry=https://npm.pkg.github.com
 
 Change remote url to Devades org scope / repo
 git remote set-url origin git@github.com:devades/turbo-design-system.git
@@ -224,3 +223,20 @@ Upgrade to remove eslint and typescript packages - install from Github packages 
 
 Upgrade eslint, and all storybook deps - this resolved storybook pnpm cache missing chunk errors, improved storybook performance and resolved pnpm install warnings re deprecated eslint pkgs
 
+### Instructions for installing packages or releasing from command line to devades github organisation as lari-ks github user (Admin user on devades org)
+
+#### github set email on repo (assuming user has multiple Github users on local machine)
+
+```
+git config user.email "email"
+```
+
+#### npm login for Github packages / Github npm registry
+
+npm login --scope=@NAMESPACE --auth-type=legacy --registry=https://npm.pkg.github.com
+
+```
+npm login --registry=https://npm.pkg.github.com
+lari-ks as username
+new personal access token as password, added as secret to repo settings secrets
+```

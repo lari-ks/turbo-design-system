@@ -1,5 +1,6 @@
 import type { Config } from 'tailwindcss';
 
+// Note safelist added to configs of consumers
 export default {
   content: [
     './src/pages/**/*.{js,ts,jsx,tsx,mdx}',

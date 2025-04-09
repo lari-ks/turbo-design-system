@@ -30,7 +30,7 @@ jobs:
       - name: Install Dependencies
         run: pnpm i
         env:
-          RELEASE_MACHINE: ${{ secrets.RELEASE_MACHINE }}
+          NODE_AUTH_TOKEN: ${{ secrets.NODE_AUTH_TOKEN }}
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
 
@@ -41,7 +41,7 @@ jobs:
           # This expects you to have a script called release which does a build for your packages and calls changeset publish
           publish: pnpm release
         env:
-          RELEASE_MACHINE: ${{ secrets.RELEASE_MACHINE }}
+          NODE_AUTH_TOKEN: ${{ secrets.NODE_AUTH_TOKEN }}
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
 

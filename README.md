@@ -220,3 +220,7 @@ npm login --registry=https://npm.pkg.github.com
 Change remote url to Devades org scope / repo
 git remote set-url origin git@github.com:devades/turbo-design-system.git
 
+Upgrade to remove eslint and typescript packages - install from Github packages as published from turbo-config repo
+
+Upgrade eslint, and all storybook deps - this resolved storybook pnpm cache missing chunk errors, improved storybook performance and resolved pnpm install warnings re deprecated eslint pkgs
+

@@ -1,7 +1,6 @@
 {
   "name": "@devades/design-system",
   "version": "0.0.5",
-  "private": true,
   "preinstall": "npx only-allow pnpm",
   "packageManager": "pnpm@8.15.6",
   "scripts": {
@@ -40,5 +39,8 @@
   "bugs": {
     "url": "https://github.com/devades/turbo-design-system/issues"
   },
-  "homepage": "https://github.com/devades/turbo-design-system#readme"
+  "homepage": "https://github.com/devades/turbo-design-system#readme",
+  "publishConfig": {
+  "registry": "https://npm.pkg.github.com"
+}
 }

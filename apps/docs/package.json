@@ -30,5 +30,24 @@
     "storybook": "^8.6.7",
     "typescript": "5.5.4",
     "vite": "^5.1.4"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com:devades/turbo-design-system.git"
+  },
+  "keywords": [
+    "storybook",
+    "docs",
+    "design system",
+    "devade"
+  ],
+  "author": "lara sweeney",
+  "license": "UNLICENSED",
+  "bugs": {
+    "url": "https://github.com/devades/turbo-design-system/issues"
+  },
+  "homepage": "https://github.com/devades/turbo-design-system#readme",
+  "publishConfig": {
+  "registry": "https://npm.pkg.github.com"
+}
 }
